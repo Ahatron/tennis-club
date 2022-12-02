@@ -1,0 +1,254 @@
+.prices {
+  margin-right: 0;
+  width: 50%;
+}
+.services {
+  margin-right: 0;
+  width: 50%;
+}
+.text {
+  font-family: GilroyLight;
+  font-weight: 500;
+  text-decoration: none;
+}
+.title-level-two {
+  font-family: GilroyBold;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+.title-level-three {
+  font-size: 2em;
+}
+.title-level-four {
+  font-family: GilroyLight;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.trainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.trainers__people {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.trainers__people-item {
+  width: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.trainers__image {
+  border: 1px #F7ECE1 solid;
+  padding: 0 16px;
+}
+.trainers__name {
+  margin-bottom: 5px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1000px;
+  padding: 0 312px 0 312px;
+  background-image: url("../images/1.png");
+}
+.header__logo-img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.header .nav__list .text {
+  color: white;
+}
+.header__nav::after {
+  position: relative;
+  top: 30px;
+  left: -311px;
+  height: 1px;
+  padding-right: 1920px;
+  background-color: rgba(255, 255, 255, 0.3);
+  content: '';
+}
+.header .networks {
+  width: 153px;
+}
+.header .networks__item:first-child {
+  margin-right: 15px;
+}
+.header__title {
+  color: white;
+  font-size: 3.6em;
+}
+.header__title_down {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.header__video {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+}
+.header__video-link {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  padding: 5px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: 2px rgba(255, 255, 255, 0.7) solid;
+  transition: 0.3s;
+}
+.header__video-button {
+  width: 64px;
+  height: 64px;
+  padding: 14px;
+  background-color: #8D86C9;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.header__video-button:hover {
+  cursor: pointer;
+  background-color: #3a346c;
+}
+.header__video-link:hover {
+  padding: 10px;
+}
+.header__video-title.text {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-size: 1.7em;
+}
+.header__services {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.header__services-card {
+  box-sizing: border-box;
+  width: 24%;
+  height: 151px;
+  background-color: #8D86C9;
+  padding: 25px;
+  text-decoration: none;
+}
+.header__services-card-name.text {
+  font-size: 1em;
+  color: white;
+}
+.header__services-card-title {
+  font-family: GilroyLight;
+  font-weight: 600;
+  font-size: 1.6em;
+  color: white;
+  background-image: url("../images/ci_external-link.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.nav {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 30px 0 30px;
+}
+.nav__list {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 0;
+  list-style-type: none;
+}
+.nav__list .text {
+  text-decoration: none;
+}
+.networks {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 20%;
+}
+.networks__item {
+  max-width: 100%;
+  object-fit: contain;
+}
+.main {
+  padding: 0 312px 0 312px;
+}
+.section {
+  margin: 150px 0;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.cards__item {
+  position: relative;
+  border: 1px #F7ECE1 solid;
+  padding: 20px;
+}
+.cards__title {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-34%, -50%);
+}
+.club-info {
+  display: flex;
+  margin: 0px 112px;
+}
+.club-info__image {
+  object-fit: contain;
+  z-index: 1;
+}
+.club-info__article {
+  margin-left: -86px;
+  position: relative;
+  padding: 50px 60px 80px 146px;
+  background-color: #F7ECE1;
+}
+.club-info__sub-title {
+  font-size: 1.7em;
+}
+.club-info__list {
+  padding-left: 20px;
+}
+.club-info__list-item {
+  padding-left: 17px;
+  margin-bottom: 16px;
+  list-style: square url("http://localhost:63342/tennis-club/images/Rectangle 46.svg") outside;
+}
+@font-face {
+  font-family: 'GilroyBold';
+  src: local(GilroyBold), url("../fonts/Gilroy-ExtraBold.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GilroyLight';
+  src: local(GilroyLight), url("../fonts/Gilroy-Light.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.body {
+  font-family: GilroyLight, GilroyBold, serif;
+  font-size: 14px;
+  margin: 0;
+}
+.container {
+  width: 1920px;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */

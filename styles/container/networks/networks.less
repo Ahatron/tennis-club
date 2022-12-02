@@ -1,0 +1,16 @@
+@import "../container";
+
+.networks{
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 11.8%;
+
+  &__item{
+    max-width: 100%;
+    object-fit: contain;
+  }
+  &__item:nth-child(n):not(:last-child){
+    margin-right: 25px;
+  }
+}

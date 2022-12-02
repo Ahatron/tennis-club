@@ -1,0 +1,81 @@
+@import "../container";
+
+.rules{
+  flex-direction: column;
+  position: relative;
+  &__list{
+    list-style-type: none;
+    counter-reset: item_counter;
+    padding: 0;
+    margin: 10px 0 440px 0;
+    width: 40%;
+    &-item{
+      margin: 45px 0;
+      .title-level-four{
+        font-family: GilroyBold;
+      }
+      .title-level-four::before{
+        content: counter(item_counter) '. ';
+        counter-increment: item_counter;
+      } 
+      
+    }
+    &-label{
+
+      &-input{
+        display: none;
+        &:checked ~ .rules__list-sub-list{
+          display: block;
+          @keyframes to_left {
+            from{opacity: 0.1;}
+            to{opacity: 1;}
+          }
+          animation: to_left 1s;
+        }
+        &:checked ~ .title-level-four{
+          color: #8D86C9;
+          padding-left: 30px;
+          transition-duration: .6s;
+        }
+      }
+    }
+
+    &-sub-list{
+      display: none;
+      position: absolute; 
+      top: 160px;
+      left: 440px;
+      list-style-type: none;
+      counter-reset: sub_item_counter;
+      transition: 1s;
+      &-item{
+
+        &-title::before{
+          content: counter(item_counter) '. ';
+          counter-increment: item_counter;
+        }
+      }
+
+    }
+    &-sub-sub-list{
+      list-style: none;
+      margin: 25px 0 40px 0;
+      padding: 0;
+      &-title{
+        font-family: GilroyBold;
+        font-size: 1.3em;
+        margin-bottom: 25px;
+      }
+      &-title::before{
+        content: counter(item_counter) '. ' counter(sub_item_counter) '. ';
+        counter-increment: sub_item_counter;
+      }
+      &-item{
+        background-image: url("../../../images/Rectangle 74list-line.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        padding-left: 25px;
+      }
+    }
+  }
+}

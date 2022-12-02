@@ -1,0 +1,36 @@
+@import "../container";
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+
+  &__item{
+    max-width: 29%;
+    position: relative;
+    border: 1px #F7ECE1 solid;
+    padding: 20px;
+    &:hover .cards__image{
+      transform: scale(1.1);
+    }
+    &:hover{
+      .cards__title{
+        top: 75%;
+      }
+    }
+  }
+  &__image{
+    max-width: 100%;
+    .default-transition(.5s);
+
+  }
+  &__title{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-34%, -50%);
+    .default-transition(.5s);
+  }
+
+}

@@ -1,0 +1,40 @@
+@import "../container";
+
+.buttons-general(){
+  width: 45px;
+  height: 45px;
+  border: 0;
+  background-repeat: no-repeat;
+  background-color: #8D86C9;
+  background-position: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+  width: 135px;
+  &__item{
+    transition: .3s;
+  }
+  &__item:first-child{
+    margin-right: 15px;
+
+    .buttons-general();
+    background-image: url("../images/Vector.png");
+  }
+  &__item:last-child{
+    .buttons-general();
+    background-image: url("../images/Vector (1).png");
+  }
+  &__item:first-child:hover{
+    width: 65px;
+  }
+  &__item:last-child:hover {
+    width: 65px;
+  }
+
+  &__item:hover{
+    background-color: #3a346c;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,177 @@
+@import "../container";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 1000px;
+  padding: @null @padding-page-item @null @padding-page-item;
+  background-image: url("../images/1.png");
+  background-repeat: no-repeat;
+
+  &__title{
+    position: relative;
+    animation: from_left 2.5s;
+    @keyframes from_left {
+      from{left:-250px; opacity: 0.2;}
+      to{left: 0; opacity: 1;}
+    }
+  }
+  &&_small {
+    height: 263px;
+    justify-content: normal;
+    .header__title{
+      animation: to_up 2s;
+    }
+    .header__title_center {
+      text-align: center;
+    }
+  }
+
+  &&__news {
+    background-image: url("../images/news-header.png");
+  }
+
+  &&__about-club {
+    background-image: url("../images/20.png");
+  }
+  
+  &_small + .main {
+    margin-top: 80px;
+  }
+
+
+  &__logo-img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .nav__list {
+    .text {
+      color: @nav-color;
+    }
+
+  }
+  &__nav{
+    position: relative;
+    animation: nav_down 2s;
+
+    @keyframes nav_down {
+      from{top: -110px; opacity: 0.2;}
+      to{top: 0; opacity: 1;}
+    }
+
+    &::after {
+      position: relative;
+      top: 30px;
+      left: -311px;
+      height: 1px;
+      padding-right: @page-width;
+      #rgba-one-arg.background-color(255, .3);
+      content: '';
+    }
+  }
+
+
+
+
+  &__title-inner {
+    color: white;
+    font-size: 3.6em;
+    &_down {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+
+
+  &__video {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    &-link {
+      display: flex;
+      width: 64px;
+      height: 64px;
+  
+      padding: 5px;
+      margin-right: 40px;
+  
+      border-radius: 50%;
+      #rgba-one-arg.border(2px, 255, 0.7, solid);
+      transition: .3s;
+    }
+    &-button {
+      width: 64px;
+      height: 64px;
+      padding: 14px;
+      background-color: #8D86C9;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+    }
+    &-button:hover {
+      cursor: pointer;
+      background-color: #3a346c;
+    }
+  
+    &-link:hover {
+      padding: 10px;
+    }
+  
+    &-title.text {
+      display: inline-flex;
+      align-items: center;
+      color: white;
+      font-size: 1.7em;
+    }
+  }
+
+
+  &__services {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    animation: to_up 3s;
+    @keyframes to_up {
+      from{bottom: -200px; opacity: 0.1;}
+      to{bottom: 0; opacity: 1;}
+    }
+    &-card {
+      box-sizing: border-box;
+      width: 24%;
+      height: 151px;
+      background-color: #8D86C9;
+  
+      padding: 25px;
+      text-decoration: none;
+      &-name.text {
+        font-size: 1em;
+        color: white;
+    
+      }
+    
+      &-title {
+        font-family: GilroyLight;
+        font-weight: 600;
+        font-size: 1.6em;
+        color: white;
+        background-image: url("../images/ci_external-link.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
+      }
+      &:hover{
+        background-color: #3a346c;
+        .default-transition();
+      }
+    }
+  }
+}

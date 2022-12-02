@@ -1,0 +1,82 @@
+@import "text/text";
+@import "title-level-two/title-level-two";
+@import "title-level-three/title-level-three";
+@import "title-level-four/title-level-four";
+
+@import "header/header";
+@import "nav/nav";
+@import "networks/networks";
+@import "buttons/buttons";
+
+@import "main/main";
+@import "section/section";
+@import "cards/cards";
+@import "club-info/club-info";
+@import "trainers/trainers";
+@import "prices/prices";
+@import "services/services";
+@import "footer/footer";
+@import "news/news";
+@import "photos/photos";
+@import "rules/rules.less";
+
+
+
+@images: "../images";
+
+
+@font-face {
+  font-family: 'GilroyBold';
+  src: local(GilroyBold), url("../fonts/Gilroy-ExtraBold.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'GilroyLight';
+  src: local(GilroyLight), url("../fonts/Gilroy-Light.otf") format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@page-width: 1920px;
+@width-in-page: 1296px;
+@margin-page-item: 312px;
+@padding-page-item: @margin-page-item;
+@null: 0;
+
+
+.default-transition(@sec: .3s) {
+  transition: @sec;
+}
+
+
+#rgba-one-arg() {
+  .border(@size: 1px, @color: 255, @opacity: 1, @type: solid) {
+    border: @size rgba(@color, @color, @color, @opacity) @type;
+  }
+  .color(@color: 255, @opacity: 1) {
+    color: rgba(@color, @color, @color, @opacity);
+  }
+  .background-color(@color: 255, @opacity: 1) {
+    background-color: rgba(@color, @color, @color, @opacity);
+  }
+}
+
+.body {
+  display: flex;
+  justify-content: space-around;
+  font-family: GilroyLight, GilroyBold, serif;
+  font-size: 14px;
+  margin: @null;
+}
+
+.container {
+  max-width: @page-width;
+  min-width: 1820px;
+  margin: auto;
+}

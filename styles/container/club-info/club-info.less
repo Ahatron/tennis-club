@@ -1,0 +1,67 @@
+@import "../container";
+
+.club-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 70px;
+
+  &_full-width{
+    margin: 0;
+  }
+  &__content {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__image {
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  &__article {
+    margin-left: -86px;
+    position: relative;
+    padding: 50px 60px 80px 146px;
+    background-color: #F7ECE1;
+  }
+
+  &__sub-title {
+    font-size: 1.7em;
+  }
+
+  &__list {
+    padding-left: 20px;
+    &-item {
+      padding-left: 17px;
+      margin-bottom: 16px;
+      list-style: square url("http://localhost:63342/tennis-club/images/Rectangle 46.svg") outside;
+    }
+  }
+  
+  &__cords {
+    display: inline-flex;
+    width: 100%;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 30%;
+      &:nth-child(2) {
+        width: 40%;
+      }
+    }
+    &-img {
+      object-fit: contain;
+    }
+  
+    &-text {
+      display: block;
+    }
+  }
+
+
+
+
+
+
+}

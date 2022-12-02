@@ -1,0 +1,48 @@
+@import "../container";
+
+.prices-and-services{
+  justify-content: space-between;
+}
+
+.prices {
+  margin-right: 0;
+  width: 38%;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    height: 70%;
+    margin-top: 70px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    &-item {
+      background-color: #8D86C9;
+      .default-transition();
+      &:hover {
+        background-color: #3a346c;
+        cursor: pointer;
+      }
+    
+      &:hover .title-level-four {
+        margin-right: 50px;
+      }
+    
+      &-link {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  
+
+  }
+
+  .title-level-four {
+    background-image: url("@{images}/Vector.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 15.5px 30px;
+    .default-transition()
+  }
+
+}
